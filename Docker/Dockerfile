@@ -1,14 +1,11 @@
-# Use a base image from Docker Hub
-FROM pytorch/pytorch
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
 
-# Set the working directory inside the container
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /usr/src/app
 
-# Copy the application files from the host machine to the container
+# Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
-# Expose a port for the application (optional)
-EXPOSE 8080
-
-# Define the command to run when the container starts
-CMD ["python","binary_classifier.py"]
+# Run the Python script
+CMD ["python", "./read_data.py"]
