@@ -1,0 +1,6 @@
+checkpoints/
+.vscode/
+gpt2_tokenizer/
+quantized_model/
+tenst_venv/
+rough/    
